@@ -1,0 +1,18 @@
+# dsh-session-delete bundle layer.
+#
+# 安装后在侧栏会话行的右键菜单（以及“…”按钮）里多出一条「移到回收站」，
+# 排在「归档」之后；侧栏面板图标区多一个「回收站」入口（主区页面可恢复/永久删除）。
+#
+# 会话先归档、日志移到 $DSH_HOME/session-delete/trash/<id>/，保留 retentionDays 天；
+# 到期按 expireAction 处理：purge（默认）自动永久删除，lock 保留但不可恢复。
+#
+# 需要改配置时，在 profile 自己的 cordis.patch.yml 里写（patch 会整体替换 config，
+# 所以要保留的键一并写上）：
+#
+#   - id: session-delete
+#     config:
+#       retentionDays: 14
+#       expireAction: purge
+- insert:
+    - id: session-delete
+      name: dsh-session-delete

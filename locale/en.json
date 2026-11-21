@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Session trash",
+    "description": "Adds Move to trash to the sidebar session menu: deleted sessions stay in the trash for a configurable retention period (14 days by default) and can be restored from the sidebar Trash entry; expired entries are purged or locked per configuration, and sessions can also be permanently deleted by hand."
+  }
+}
